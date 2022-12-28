@@ -52,11 +52,11 @@
             const input2 = Number(document.querySelector('#input2').value);
 
             if ((input1 < 1 || input1 > 10 || isNaN(input1)) && (input2 < 1 || input2 > 10 || isNaN(input2))) {
-                alert("Номер страницы и лимит вне диапазона от 1 до 10");
+                console.log("Номер страницы и лимит вне диапазона от 1 до 10");
             } else if (input1 < 1 || input1 > 10 || isNaN(input1)) {
-                alert("Номер страницы вне диапазона от 1 до 10");
+                console.log("Номер страницы вне диапазона от 1 до 10");
             } else if (input2 < 1 || input2 > 10 || isNaN(input2)) {
-                alert("Лимит вне диапазона от 1 до 10");
+                console.log("Лимит вне диапазона от 1 до 10");
             } else {
                 fetch(`https://picsum.photos/v2/list?page=${input1}&limit=${input2}`)
                     .then((response) => {
